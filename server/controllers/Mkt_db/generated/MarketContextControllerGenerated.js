@@ -27,48 +27,14 @@ const generatedControllers = {
    */
   init: router => {
     const baseUrl = `${Properties.api}/marketcontext`;
-    router.post(baseUrl + "", authorize([]), MarketContextController.create);
-    router.delete(baseUrl + "/:id", authorize([]), MarketContextController.delete);
     router.get(baseUrl + "/:id", authorize([]), MarketContextController.get);
     router.get(baseUrl + "", authorize([]), MarketContextController.list);
-    router.post(baseUrl + "/:id", authorize([]), MarketContextController.update);
   },
 
 
   // CRUD METHODS
 
 
-  /**
-  * MarketContextModel.create
-  *   @description CRUD ACTION create
-  *
-  */
-  create: async (req, res) => {
-    try {
-      const result = await MarketContextModel.create(req.body);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
-  /**
-  * MarketContextModel.delete
-  *   @description CRUD ACTION delete
-  *   @param ObjectId id Id
-  *
-  */
-  delete: async (req, res) => {
-    try {
-      const result = await MarketContextModel.delete(req.params.id);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
-  
   /**
   * MarketContextModel.get
   *   @description CRUD ACTION get
@@ -100,22 +66,6 @@ const generatedControllers = {
     }
   },
   
-  
-  /**
-  * MarketContextModel.update
-  *   @description CRUD ACTION update
-  *   @param ObjectId id Id
-  *
-  */
-  update: async (req, res) => {
-    try {
-      const result = await MarketContextModel.update(req.body);
-      res.json(result);
-    } catch (err) {
-      const safeErr = ErrorManager.getSafeError(err);
-      res.status(safeErr.status).json(safeErr);
-    }
-  },
   
   
   // Custom APIs

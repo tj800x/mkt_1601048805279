@@ -31,25 +31,6 @@ const generatedModel = {
 
 
   /**
-  * MarketContextModel.create
-  *   @description CRUD ACTION create
-  *
-  */
-  async create(item) {
-    let result = await Database.getConnection().models.MarketContext.create(item);    return result;
-  },
-  
-  /**
-  * MarketContextModel.delete
-  *   @description CRUD ACTION delete
-  *   @param ObjectId id Id
-  *
-  */
-  async delete(id) {
-    return await Database.getConnection().models.MarketContext.destroy({ where: { _id: id } });
-  },
-  
-  /**
   * MarketContextModel.get
   *   @description CRUD ACTION get
   *   @param ObjectId id Id resource
@@ -68,19 +49,6 @@ const generatedModel = {
   async list() { 
     return await Database.getConnection().models.MarketContext.findAll();
       },
-  
-  /**
-  * MarketContextModel.update
-  *   @description CRUD ACTION update
-  *   @param ObjectId id Id
-  *
-  */
-  async update(item) { 
-    let result = await Database.getConnection().models.MarketContext.update(item, {
-      where: { _id: item._id }
-    });
-    return result;
-  },
   
 
 

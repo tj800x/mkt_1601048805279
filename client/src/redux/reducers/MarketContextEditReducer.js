@@ -14,10 +14,6 @@ export default function MarketContextEditReducer(state = initialState, action) {
 
 
     // START REDUCERS
-    case types.CREATE_MARKETCONTEXT_SUCCESS:
-      return { ...state, marketcontext: action.payload };
-    case types.UPDATE_MARKETCONTEXT_SUCCESS:
-      return { ...state, marketcontext: action.payload };
     case types.GET_MARKETCONTEXT_SUCCESS:
       return { ...state, marketcontext: action.payload };
      // END REDUCERS

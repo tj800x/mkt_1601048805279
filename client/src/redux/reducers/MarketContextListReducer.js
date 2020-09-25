@@ -14,8 +14,6 @@ export default function MarketContextListReducer(state = initialState, action) {
 
 
     // START REDUCERS
-    case types.DELETE_MARKETCONTEXT_SUCCESS:
-      return { ...state, marketcontext: action.payload };
     case types.LIST_MARKETCONTEXT_SUCCESS:
       return { ...state, listMarketContext: action.payload };
      // END REDUCERS

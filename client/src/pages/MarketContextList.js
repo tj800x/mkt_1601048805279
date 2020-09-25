@@ -29,10 +29,6 @@ import MarketContextActions from "../redux/actions/MarketContextActions";
 
 /** APIs
 
-* actionsMarketContext.delete
-*	@description CRUD ACTION delete
-*	@param ObjectId id - Id
-*
 * actionsMarketContext.list
 *	@description CRUD ACTION list
 *

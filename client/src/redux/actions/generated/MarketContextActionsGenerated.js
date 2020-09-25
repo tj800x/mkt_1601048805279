@@ -23,44 +23,6 @@ let actionsFunction = {
 
   //CRUD METHODS
 
-  // Create marketcontext
-  createMarketContext: function(marketcontext) {
-    return function(dispatch) {
-      return MarketContextApi
-        .createMarketContext(marketcontext)
-        .then(marketcontext => {
-          dispatch(actionsFunction.createMarketContextSuccess(marketcontext));
-        })
-        .catch(error => {
-          throw error;
-        });
-    };
-  },
-
-  createMarketContextSuccess: function(marketcontext) {
-    return { type: types.CREATE_MARKETCONTEXT_SUCCESS, payload: marketcontext };
-  },
-
-
-  // Delete marketcontext
-  deleteMarketContext: function(id) {
-    return function(dispatch) {
-      return MarketContextApi
-        .deleteMarketContext(id)
-        .then(marketcontext => {
-          dispatch(actionsFunction.deleteMarketContextSuccess(marketcontext));
-        })
-        .catch(error => {
-          throw error;
-        });
-    };
-  },
-
-  deleteMarketContextSuccess: function(marketcontext) {
-    return { type: types.DELETE_MARKETCONTEXT_SUCCESS, payload: marketcontext };
-  },
-
-
   // Get marketcontext
   loadMarketContext: function(id) {
     return function(dispatch) {
@@ -95,25 +57,6 @@ let actionsFunction = {
 
   loadMarketContextListSuccess: function(list) {
     return { type: types.LIST_MARKETCONTEXT_SUCCESS, payload: list };
-  },
-
-	
-  // Save marketcontext
-  saveMarketContext: function(marketcontext) {
-    return function(dispatch) {
-      return MarketContextApi
-        .saveMarketContext(marketcontext)
-        .then(marketcontext => {
-          dispatch(actionsFunction.saveMarketContextSuccess(marketcontext));
-        })
-        .catch(error => {
-          throw error;
-        });
-    };
-  },
-
-  saveMarketContextSuccess: function(marketcontext) {
-    return { type: types.UPDATE_MARKETCONTEXT_SUCCESS, payload: marketcontext };
   },
 
 

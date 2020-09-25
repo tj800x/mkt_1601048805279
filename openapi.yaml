@@ -76,89 +76,7 @@ paths:
       responses:
         "200":
           description: OK
-  /marketcontext:
-    post:
-      x-skaffolder-id: 5f6e110e67541c707d17f356
-      x-skaffolder-name: create
-      x-skaffolder-id-resource: 5f6e110967541c707d17f353
-      x-skaffolder-resource: MarketContext
-      x-skaffolder-crudAction: create
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION create
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /
-      x-skaffolder-roles: []
-      summary: CRUD ACTION create
-      tags:
-        - MarketContext
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MarketContext"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                tvalue:
-                  type: string
-    get:
-      x-skaffolder-id: 5f6e110e67541c707d17f35e
-      x-skaffolder-name: list
-      x-skaffolder-id-resource: 5f6e110967541c707d17f353
-      x-skaffolder-resource: MarketContext
-      x-skaffolder-crudAction: list
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION list
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /
-      x-skaffolder-roles: []
-      summary: CRUD ACTION list
-      tags:
-        - MarketContext
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/MarketContext"
   "/marketcontext/{id}":
-    delete:
-      x-skaffolder-id: 5f6e110e67541c707d17f35c
-      x-skaffolder-name: delete
-      x-skaffolder-id-resource: 5f6e110967541c707d17f353
-      x-skaffolder-resource: MarketContext
-      x-skaffolder-crudAction: delete
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION delete
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /{id}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION delete
-      tags:
-        - MarketContext
-      parameters:
-        - name: id
-          x-skaffolder-type: ObjectId
-          in: path
-          description: Id
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK
     get:
       x-skaffolder-id: 5f6e110e67541c707d17f357
       x-skaffolder-name: get
@@ -189,109 +107,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MarketContext"
-    post:
-      x-skaffolder-id: 5f6e110e67541c707d17f358
-      x-skaffolder-name: update
+  /marketcontext:
+    get:
+      x-skaffolder-id: 5f6e110e67541c707d17f35e
+      x-skaffolder-name: list
       x-skaffolder-id-resource: 5f6e110967541c707d17f353
       x-skaffolder-resource: MarketContext
-      x-skaffolder-crudAction: update
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION update
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /{id}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION update
-      tags:
-        - MarketContext
-      parameters:
-        - name: id
-          x-skaffolder-type: ObjectId
-          in: path
-          description: Id
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MarketContext"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/MarketContext"
-  "/user/{id}/changePassword":
-    post:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e5
-      x-skaffolder-name: changePassword
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: 
-      x-skaffolder-crudType: 
-      x-skaffolder-description: Change password of user from admin
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: object
-      x-skaffolder-url: /{id}/changePassword
-      x-skaffolder-roles:
-        - 5f6e10aa67541c707d17f2e2
-      summary: Change password of user from admin
-      tags:
-        - User
-      responses:
-        "200":
-          description: OK
-  /user:
-    post:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e8
-      x-skaffolder-name: create
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: create
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION create
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /
-      x-skaffolder-roles: []
-      summary: CRUD ACTION create
-      tags:
-        - User
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                mail:
-                  type: string
-                name:
-                  type: string
-                password:
-                  type: string
-                roles:
-                  type: string
-                surname:
-                  type: string
-                username:
-                  type: string
-    get:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e7
-      x-skaffolder-name: list
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
       x-skaffolder-crudAction: list
       x-skaffolder-crudType: 
       x-skaffolder-description: CRUD ACTION list
@@ -301,7 +122,7 @@ paths:
       x-skaffolder-roles: []
       summary: CRUD ACTION list
       tags:
-        - User
+        - MarketContext
       responses:
         "200":
           description: OK
@@ -310,100 +131,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/User"
-  "/user/{id}":
-    delete:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e6
-      x-skaffolder-name: delete
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: delete
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION delete
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /{id}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION delete
-      tags:
-        - User
-      parameters:
-        - name: id
-          x-skaffolder-type: ObjectId
-          in: path
-          description: Id
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK
-    get:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e9
-      x-skaffolder-name: get
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: get
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION get
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /{id}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION get
-      tags:
-        - User
-      parameters:
-        - name: id
-          x-skaffolder-type: ObjectId
-          in: path
-          description: Id resource
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-    post:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e3
-      x-skaffolder-name: update
-      x-skaffolder-id-resource: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-resource: User
-      x-skaffolder-crudAction: update
-      x-skaffolder-crudType: 
-      x-skaffolder-description: CRUD ACTION update
-      x-skaffolder-returnDesc: 
-      x-skaffolder-returnType: 
-      x-skaffolder-url: /{id}
-      x-skaffolder-roles: []
-      summary: CRUD ACTION update
-      tags:
-        - User
-      parameters:
-        - name: id
-          x-skaffolder-type: ObjectId
-          in: path
-          description: Id
-          required: true
-          schema:
-            type: string
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/User"
+                  $ref: "#/components/schemas/MarketContext"
 security:
   - bearerAuth: []
 components:
@@ -429,47 +157,6 @@ components:
       x-skaffolder-relations: 
       required:
         - _id
-    User:
-      x-skaffolder-id: 5f6e10aa67541c707d17f2e0
-      x-skaffolder-id-db: 5f6e10aa67541c707d17f2d7
-      x-skaffolder-id-entity: 5f6e10aa67541c707d17f2d8
-      x-skaffolder-url: /user
-      x-skaffolder-type: User
-      properties:
-        _id:
-          type: string
-          x-skaffolder-required: true
-        mail:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2db
-          x-skaffolder-type: String
-        name:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2dc
-          x-skaffolder-type: String
-        password:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2da
-          x-skaffolder-type: String
-          x-skaffolder-required: true
-        roles:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2de
-          x-skaffolder-type: String
-        surname:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2dd
-          x-skaffolder-type: String
-        username:
-          type: string
-          x-skaffolder-id-attr: 5f6e10aa67541c707d17f2d9
-          x-skaffolder-type: String
-          x-skaffolder-required: true
-      x-skaffolder-relations: 
-      required:
-        - _id
-        - password
-        - username
   x-skaffolder-db:
     - x-skaffolder-id: 5f6e10aa67541c707d17f2d7
       x-skaffolder-name: mkt_db
@@ -490,8 +177,6 @@ components:
       x-skaffolder-template: Edit_Crud
       x-skaffolder-resource: 5f6e110967541c707d17f353
       x-skaffolder-services:
-        - 5f6e110e67541c707d17f356
-        - 5f6e110e67541c707d17f358
         - 5f6e110e67541c707d17f357
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
@@ -502,7 +187,6 @@ components:
       x-skaffolder-template: List_Crud
       x-skaffolder-resource: 5f6e110967541c707d17f353
       x-skaffolder-services:
-        - 5f6e110e67541c707d17f35c
         - 5f6e110e67541c707d17f35e
       x-skaffolder-nesteds: 
       x-skaffolder-links:

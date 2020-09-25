@@ -27,37 +27,6 @@ class MarketContextApiGenerated {
   // CRUD METHODS
 
   /**
-  * MarketContextService.create
-  *   @description CRUD ACTION create
-  *
-  */
-  static createMarketContext(marketcontext) {
-    return axios.post(MarketContextApiGenerated.contextUrl, marketcontext )
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        throw error;
-      });
-  }
-
-  /**
-  * MarketContextService.delete
-  *   @description CRUD ACTION delete
-  *   @param ObjectId id Id
-  *
-  */
-  static deleteMarketContext(id) {
-    return axios.delete(MarketContextApiGenerated.contextUrl + "/" + id)
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        throw error;
-      });
-  }
-
-  /**
   * MarketContextService.get
   *   @description CRUD ACTION get
   *   @param ObjectId id Id resource
@@ -80,22 +49,6 @@ class MarketContextApiGenerated {
   */
   static getMarketContextList() {
     return axios.get(MarketContextApiGenerated.contextUrl)
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        throw error;
-      });
-  }
-
-  /**
-  * MarketContextService.update
-  *   @description CRUD ACTION update
-  *   @param ObjectId id Id
-  *
-  */
-  static saveMarketContext(marketcontext) {
-    return axios.post(MarketContextApiGenerated.contextUrl + "/" + marketcontext._id, marketcontext )
       .then(response => {
         return response.data;
       })

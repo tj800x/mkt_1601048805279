@@ -22,13 +22,6 @@ import MarketContextActions from "../redux/actions/MarketContextActions";
 
 /** APIs
 
-* actionsMarketContext.create
-*	@description CRUD ACTION create
-*
-* actionsMarketContext.update
-*	@description CRUD ACTION update
-*	@param ObjectId id - Id
-*
 * actionsMarketContext.get
 *	@description CRUD ACTION get
 *	@param ObjectId id - Id resource

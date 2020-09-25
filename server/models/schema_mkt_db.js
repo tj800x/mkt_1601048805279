@@ -45,60 +45,12 @@ export default init => {
     );
 
 
-
-    /**
-      * ------------------------------------
-      * User
-      * ------------------------------------
-      */
-    class User extends Sequelize.Model{}
-    User.init({
-      _id: { 
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      
-      mail: {
-        type: Sequelize.STRING
-      },
-      
-      name: {
-        type: Sequelize.STRING
-      },
-      
-      password: {
-        type: Sequelize.STRING, 
-        allowNull: false
-      },
-      
-      surname: {
-        type: Sequelize.STRING
-      },
-      
-      username: {
-        type: Sequelize.STRING, 
-        allowNull: false
-      },
-      
-      //RELATIONS
-      
-      
-      //EXTERNAL RELATIONS
-      /*
-      */
-    },
-      { sequelize, tableName: "user", timestamps: false }
-    );
-
-
     /**
       * ------------------------------------
       * Relations many to many
       * ------------------------------------
       */
 
-    
     
   /**
    * ------------------------------------

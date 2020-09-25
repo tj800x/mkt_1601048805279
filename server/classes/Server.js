@@ -28,7 +28,6 @@ import Database_Mkt_db from "./Database_Mkt_db.js";
 
 // Controllers
 import MarketContextController from "../controllers/Mkt_db/MarketContextController";
-import UserController from "../controllers/Mkt_db/UserController";
 
 // End Import Controllers
 
@@ -107,7 +106,6 @@ class Server {
 
     // Start Init Controllers
 		MarketContextController.init(router);
-		UserController.init(router);
 		 // End Init Controllers
 
     this.app.use("/", router);
